@@ -1,4 +1,20 @@
 
-<ul>
-  <li ng-repeat="candidato in homeCtrl.listaCandidatos track by candidato.id"><a ng-click="homeCtrl.cargarDetalle(candidato.id)">{{candidato.nombre}}</a></li>
-</ul>
+<div id="content">
+  <div id="list_pol">
+    <div ng-repeat="candidato in homeCtrl.listaCandidatos track by candidato.id" ng-click="homeCtrl.cargarDetalle(candidato.id)" class="pol">
+      <div class="ava"><img ng-src="{{::candidato.foto}}" class="avatar"/><span class="flag"></span></div>
+      <div class="desc">
+        <p class="nom">{{::candidato.nombre}}</p>
+        <p class="part">{{::candidato.partido}}</p>
+      </div>
+      <div class="val">
+        <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xs"/></div><span class="hr"></span>
+        <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"/></div>
+      </div>
+      <div class="votes">
+        <div class="vote happy"><span>10%</span></div><span class="hr"></span>
+        <div class="vote angry"><span>90%</span></div>
+      </div>
+    </div>
+  </div>
+</div>

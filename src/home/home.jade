@@ -1,3 +1,21 @@
-ul
-	li(ng-repeat="candidato in homeCtrl.listaCandidatos track by candidato.id")
-		a(ng-click="homeCtrl.cargarDetalle(candidato.id)") {{candidato.nombre}}
+div#content
+	div#list_pol
+		div.pol(ng-repeat="candidato in homeCtrl.listaCandidatos track by candidato.id", ng-click="homeCtrl.cargarDetalle(candidato.id)")
+			div.ava
+				img(ng-src="{{::candidato.foto}}").avatar
+				span.flag
+			div.desc
+				p.nom {{::candidato.nombre}}
+				p.part {{::candidato.partido}}
+			div.val
+				div.icon
+					img(src="./assets/images/happy.png").icon-happy.icon-xs
+				span.hr
+				div.icon
+					img(src="./assets/images/angry.png").icon-angry.icon-xl
+			div.votes
+				div.vote.happy
+					span 10%
+				span.hr
+				div.vote.angry
+					span 90%

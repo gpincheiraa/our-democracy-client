@@ -14,11 +14,6 @@
       .module('OurDemocracyApp')
       .constant('APP_SETTINGS', {
         BASE_URL: 'http://localhost:3000/api'
-        // NAVBAR_SETTINGS: {
-        //   templateUrl: 'assets/views/navbar/navbar.html',
-        //   controller: 'NavbarController',
-        //   controllerAs: 'navbar'
-        // }
       });
 
     angular
@@ -40,7 +35,6 @@
           .state('app.home', {
             url:'/home',
             views: {
-              //'navbar' : APP_SETTINGS.NAVBAR_SETTINGS,
               'content' : {
                 templateUrl: 'assets/views/home/home.html',
                 controller: 'HomeController',
@@ -56,7 +50,6 @@
           .state('app.detalle', {
             url:'/detalle/:id',
             views: {
-              //'navbar' : APP_SETTINGS.NAVBAR_SETTINGS,
               'content' : {
                 templateUrl: 'assets/views/detalle/detalle.html',
                 controller: 'DetalleController',
