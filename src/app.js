@@ -13,7 +13,7 @@
   	angular
       .module('OurDemocracyApp')
       .constant('APP_SETTINGS', {
-        BASE_URL: 'http://localhost:3000/api'
+        //BASE_URL: 'http://localhost:3000/api'
         // NAVBAR_SETTINGS: {
         //   templateUrl: 'assets/views/navbar/navbar.html',
         //   controller: 'NavbarController',
@@ -26,6 +26,8 @@
       .module('OurDemocracyApp')
       .config(configFn);
 
+    configFn.$inject = ['$stateProvider', '$urlRouterProvider', 'APP_SETTINGS']
+
     function configFn($stateProvider, $urlRouterProvider, APP_SETTINGS){
 
       //Routes
@@ -36,7 +38,6 @@
           abstract: true,
           templateUrl: 'assets/views/main/main.html'
         })
-          
           .state('app.home', {
             url:'/home',
             views: {
@@ -46,9 +47,6 @@
               }
             }
           })
-
-      }
-
-
+    }
 
 })();

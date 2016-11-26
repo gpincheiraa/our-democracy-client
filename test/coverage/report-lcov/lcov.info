@@ -1,5 +1,5 @@
 TN:
-SF:/home/dev/app/src/app.js
+SF:/Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/app.js
 FN:1,(anonymous_1)
 FN:29,configFn
 FNF:2
@@ -19,7 +19,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/dev/app/src/home/controllers/home.controller.js
+SF:/Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/home/controllers/home.controller.js
 FN:1,(anonymous_1)
 FN:9,Controller
 FNF:2
@@ -37,7 +37,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/dev/app/src/templates.js
+SF:/Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/templates.js
 FN:1,(anonymous_1)
 FNF:1
 FNH:1

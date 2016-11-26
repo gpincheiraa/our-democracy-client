@@ -50,8 +50,9 @@ module.exports = function(grunt) {
                                 'injector:local_dependencies',
                                 'shell:test',
                                 'connect:server',
-                                'watch' ],
-      
+                                'open:dev',
+                                'watch'],
+    
       COVERAGE_TASKS = [  'shell:test',
                           'open:coverage',
                           'connect:coverage',
@@ -267,7 +268,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          keepalive: true,
+          //keepalive: true,
           port: 9000,
           base: '.',
           open: false
