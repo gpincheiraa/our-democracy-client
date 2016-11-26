@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
   //Variables que representan aspectos de la estructura de la aplicación
   var INDEX_URL = 'http://localhost:9000/#/',
-      ANGULAR_MAIN_MODULE  = 'CountriesApp',
+      ANGULAR_MAIN_MODULE  = 'OurDemocracyApp',
       ANGULAR_TEMPLATES_SRC = ['assets/views/**/*.html'],
       ANGULAR_TEMPLATES_DEST  = 'src/templates.js',
       HTML_DEST = 'assets/views/',
@@ -267,7 +267,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          //keepalive: true,
+          keepalive: true,
           port: 9000,
           base: '.',
           open: false
