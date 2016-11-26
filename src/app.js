@@ -71,16 +71,16 @@
           })
     }
 
-    angular
-      .module('OurDemocracyApp')
-      .run(runFn);
+    // angular
+    //   .module('OurDemocracyApp')
+    //   .run(runFn);
 
-    runFn.$inject = ['$rootScope'];
+    // runFn.$inject = ['$rootScope'];
 
-    function runFn($rootScope){
-      $rootScope.$on('$stateChangeError', function (e, toState, toParams, fromState, fromParams, error) {
-        e.preventDefault();
-      });
-    }
+    // function runFn($rootScope){
+    //   $rootScope.$on('$stateChangeError', function (e, toState, toParams, fromState, fromParams, error) {
+    //     e.preventDefault();
+    //   });
+    // }
 
 })();
