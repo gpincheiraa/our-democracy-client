@@ -3,7 +3,7 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
 
   $templateCache.put('assets/views/detalle/detalle.html',
     '\n' +
-    '<h1>detalle de {{detalleCtrl.idCandidato}}</h1>'
+    '<h1>detalle de {{detalleCtrl.infoCandidato}}</h1>'
   );
 
 

@@ -6,16 +6,13 @@
   	.module('OurDemocracyApp')
   	.controller('HomeController',Controller);
 
-  Controller.$inject = ['$state'];
+  Controller.$inject = ['$state', 'listaCandidatosResponse'];
 
-  function Controller($state){
+  function Controller($state, listaCandidatosResponse){
   	
   	var vm = this;
 
-  	vm.listaCandidatos = [
-  		{id:1,nombre:'German'},
-  		{id:2,nombre: 'Gonzalo'}
-  	];
+  	vm.listaCandidatos = listaCandidatosResponse;
 
   	vm.cargarDetalle = cargarDetalle;
 

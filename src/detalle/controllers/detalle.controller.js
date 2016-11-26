@@ -8,22 +8,13 @@
   	.module('OurDemocracyApp')
   	.controller('DetalleController',Controller);
 
-  Controller.$inject = ['$stateParams'];
+  Controller.$inject = ['$stateParams', 'infoCandidatoResponse'];
 
-  function Controller($stateParams){
+  function Controller($stateParams, infoCandidatoResponse){
   	
   	var vm = this;
 
-  	vm.idCandidato = $stateParams.id;
-
-  	vm.verCandidato = verCandidato;
-
-  	function verCandidato(){
-
-  		//url format /detalle/:id
-
-  	}
-
+  	vm.infoCandidato = infoCandidatoResponse;
   }
 
 })();

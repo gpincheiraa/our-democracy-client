@@ -7,15 +7,20 @@
   	var HomeController,
         stateService;
 
-  	beforeEach(module('OurDemocracyApp'));
+  	beforeEach(module('OurDemocracyApp', provideToSpec));
+
+    function provideToSpec($provide){
+      $provide.value('listaCandidatosResponse', [
+        {id:1,nombre: 'Ricardo Lagos'},
+        {id:2,nombre: 'Alejandro Guiller'}
+      ]);
+    }
 
     beforeEach(inject(eachSpec));
 
     function eachSpec($controller,$state){
-      
       HomeController = $controller('HomeController');
       stateService = $state;
-
     }
 
     it('1. Debería estar definido', spec1);

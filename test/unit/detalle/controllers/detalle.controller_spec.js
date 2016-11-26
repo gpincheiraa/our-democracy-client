@@ -9,7 +9,16 @@
   	var DetalleController,
         stateService;
 
-  	beforeEach(module('OurDemocracyApp'));
+  	beforeEach(module('OurDemocracyApp', provideToSpec));
+
+    function provideToSpec($provide){
+      $provide.value('infoCandidatoResponse', {
+          nombre: 'piraña',
+          positivos: 10,
+          neutrales: 30,
+          negativos: 60
+        });
+    }
 
     beforeEach(inject(eachSpec));
 
