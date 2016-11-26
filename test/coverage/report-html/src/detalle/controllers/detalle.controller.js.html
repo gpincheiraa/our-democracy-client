@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/templates.js</title>
+    <title>Code coverage report for src/detalle/controllers/detalle.controller.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">all files</a> / <a href="index.html">src/</a> templates.js
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/detalle/controllers/</a> detalle.controller.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>8/8</span>
       </div>
     </div>
   </div>
@@ -67,55 +67,67 @@
 22
 23
 24
-25</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+25
+26
+27
+28
+29</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache) {
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//detalle.controller.js
+&nbsp;
+(function() {
+  
   'use strict';
 &nbsp;
-  $templateCache.put('assets/views/detalle/detalle.html',
-    '\n' +
-    '&lt;h1&gt;detalle de {{detalleCtrl.idCandidato}}&lt;/h1&gt;'
-  );
+  angular
+  	.module('OurDemocracyApp')
+  	.controller('DetalleController',Controller);
 &nbsp;
+  Controller.$inject = ['$stateParams'];
 &nbsp;
-  $templateCache.put('assets/views/home/home.html',
-    '\n' +
-    '&lt;ul&gt;\n' +
-    '  &lt;li ng-repeat="candidato in homeCtrl.listaCandidatos track by candidato.id"&gt;&lt;a ng-click="homeCtrl.cargarDetalle(candidato.id)"&gt;{{candidato.nombre}}&lt;/a&gt;&lt;/li&gt;\n' +
-    '&lt;/ul&gt;'
-  );
+  function Controller($stateParams){
+  	
+  	var vm = this;
 &nbsp;
+  	vm.idCandidato = $stateParams.id;
 &nbsp;
-  $templateCache.put('assets/views/main/main.html',
-    '\n' +
-    '&lt;div ui-view="navbar"&gt;&lt;/div&gt;\n' +
-    '&lt;div ui-view="content"&gt;&lt;/div&gt;'
-  );
+  	vm.verCandidato = verCandidato;
 &nbsp;
-}]);
-&nbsp;</pre></td></tr>
+<span class="fstat-no" title="function not covered" >  	function verCandidato(){</span>
+&nbsp;
+  		//url format /detalle/:id
+&nbsp;
+  	}
+&nbsp;
+  }
+&nbsp;
+})();</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
@@ -124,7 +136,7 @@
   generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Nov 26 2016 18:35:51 GMT+0000 (UTC)
 </div>
 </div>
-<script src="../prettify.js"></script>
+<script src="../../../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -132,6 +144,6 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../sorter.js"></script>
+<script src="../../../sorter.js"></script>
 </body>
 </html>

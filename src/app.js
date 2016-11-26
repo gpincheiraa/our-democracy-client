@@ -43,7 +43,20 @@
             views: {
               //'navbar' : APP_SETTINGS.NAVBAR_SETTINGS,
               'content' : {
-                templateUrl: 'assets/views/home/home.html'
+                templateUrl: 'assets/views/home/home.html',
+                controller: 'HomeController',
+                controllerAs: 'homeCtrl'
+              }
+            }
+          })
+          .state('app.detalle', {
+            url:'/detalle/:id',
+            views: {
+              //'navbar' : APP_SETTINGS.NAVBAR_SETTINGS,
+              'content' : {
+                templateUrl: 'assets/views/detalle/detalle.html',
+                controller: 'DetalleController',
+                controllerAs: 'detalleCtrl'
               }
             }
           })

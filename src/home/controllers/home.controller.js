@@ -6,11 +6,24 @@
   	.module('OurDemocracyApp')
   	.controller('HomeController',Controller);
 
-  function Controller(){
+  Controller.$inject = ['$state'];
+
+  function Controller($state){
   	
   	var vm = this;
 
-  	vm.listaCandidatos = [];
+  	vm.listaCandidatos = [
+  		{id:1,nombre:'German'},
+  		{id:2,nombre: 'Gonzalo'}
+  	];
+
+  	vm.cargarDetalle = cargarDetalle;
+
+  	function cargarDetalle(idCandidato){
+
+  		$state.go('app.detalle',{id: idCandidato});
+
+  	}
   }
 
 })();
