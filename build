@@ -1,0 +1,4 @@
+echo "Ingrese el nombre para la imagen:"
+read imagename
+
+docker build -t $imagename .

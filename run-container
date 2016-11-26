@@ -1,0 +1,6 @@
+echo "Ingrese el nombre de su imagen docker para el contenedor:"
+read imagename
+echo "Ingrese un nombre para el contenedor:"
+read containername
+
+docker run -it -p 9000:9000 -p 35729:35729 -p 9876:9876  -v $(pwd):/home/dev/app --name="$containername" --privileged "$imagename"

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="OurDemocracyApp" ng-strict-di>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="OurDemocracyApp">
+    <meta name="author" content="gpincheiraa@gmail.cl">
+
+    <title>OurDemocracyApp</title>
+    
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <!-- endbower -->
+    <!-- injector:css -->
+    <!-- endinjector -->
+  </head>
+
+  <body>
+    
+    <div class="app-container" ui-view></div>
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/spin.js/spin.js"></script>
+    <script src="bower_components/angular-spinner/angular-spinner.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-breadcrumb/release/angular-breadcrumb.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <!-- endbower -->
+    <!-- injector:js -->
+    <script src="src/templates.js"></script>
+    <!-- endinjector -->
+    <!-- SOLO PARA DESARROLLO, ELIMINAR EN PRODUCCIÓN -->
+    <script src="//localhost:35729/livereload.js"></script>
+
+  </body>
+</html>
