@@ -12,7 +12,7 @@
   	angular
       .module('OurDemocracyApp')
       .constant('APP_SETTINGS', {
-        BASE_URL: 'http://ourdemocracy.cloudapp.net:3000/api',
+        BASE_URL: 'http://ourdemocracy.cloudapp.net:3000/api'
       });
 
     angular
@@ -31,22 +31,7 @@
           abstract: true,
           templateUrl: 'assets/views/main/main.html',
           controllerAs: 'mainCtrl',
-          controller: ['$scope',function($scope){
-
-            var vm = this;
-
-            vm.loading = false;
-
-            $scope.$on('loading:true', function(e, nombreCandidato){
-              vm.loading = true
-              vm.nombreCandidato = nombreCandidato;
-            });
-            
-            $scope.$on('loading:false', function(){
-              vm.loading = false
-            });
-
-          }]
+          controller: 'MainController'
         })
           .state('app.home', {
             url:'/home',

@@ -1,5 +1,3 @@
-//detalle.controller.js
-
 (function() {
   
   'use strict';
