@@ -1,4 +1,4 @@
-/* line 1, /home/dev/app/src/main/main.scss */
+/* line 2, /home/dev/app/src/main/main.scss */
 #header {
   background: url("../images/header.jpg");
   background-size: cover;
@@ -6,7 +6,7 @@
   color: white;
 }
 
-/* line 7, /home/dev/app/src/main/main.scss */
+/* line 8, /home/dev/app/src/main/main.scss */
 #header .bg {
   background-color: rgba(0, 0, 0, 0.5);
   vertical-align: middle;
@@ -14,4 +14,103 @@
   margin: 0;
   padding: 50px;
   padding-bottom: 100px;
+}
+
+/* line 16, /home/dev/app/src/main/main.scss */
+.loading {
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  color: white;
+}
+/* line 25, /home/dev/app/src/main/main.scss */
+.loading h2, .loading h3, .loading h4 {
+  margin: 35vh auto;
+  text-align: center;
+  width: 100%;
+  z-index: 11;
+  position: fixed;
+}
+/* line 32, /home/dev/app/src/main/main.scss */
+.loading .pong-spinner {
+  width: 100px;
+  height: 100px;
+  margin: 45vh auto;
+  position: relative;
+}
+/* line 38, /home/dev/app/src/main/main.scss */
+.loading .pong-spinner:before {
+  left: 0;
+}
+/* line 41, /home/dev/app/src/main/main.scss */
+.loading .pong-spinner:before, .loading .pong-spinner:after {
+  width: 5px;
+  height: 30px;
+  border-radius: 3px;
+  position: absolute;
+  background: white;
+  content: "";
+  animation: left-player 2s infinite linear;
+}
+/* line 50, /home/dev/app/src/main/main.scss */
+.loading .pong-spinner:after {
+  animation: right-player 2s infinite linear;
+  right: 0;
+}
+/* line 54, /home/dev/app/src/main/main.scss */
+.loading .pong-spinner i {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background: white;
+  border-radius: 10px;
+  animation: ball 2s infinite linear;
+}
+@keyframes left-player {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 70px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes right-player {
+  0% {
+    top: 70px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 70px;
+  }
+}
+@keyframes ball {
+  0% {
+    top: 20px;
+    left: 5px;
+  }
+  25% {
+    top: 50px;
+    left: 90px;
+  }
+  50% {
+    top: 80px;
+    left: 5px;
+  }
+  75% {
+    top: 50px;
+    left: 90px;
+  }
+  100% {
+    top: 20px;
+    left: 5px;
+  }
 }

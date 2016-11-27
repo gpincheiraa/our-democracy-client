@@ -1,119 +1,128 @@
 /* line 1, /home/dev/app/src/home/home.scss */
 .tweets {
+  display: none;
   margin: 30px auto;
 }
-/* line 3, /home/dev/app/src/home/home.scss */
+/* line 4, /home/dev/app/src/home/home.scss */
 .tweets .tweet {
   width: 100%;
 }
-/* line 5, /home/dev/app/src/home/home.scss */
+/* line 6, /home/dev/app/src/home/home.scss */
 .tweets .tweet .tweet-1 {
   width: 40%;
   margin-right: 60%;
   margin-left: 10px;
 }
-/* line 11, /home/dev/app/src/home/home.scss */
+/* line 12, /home/dev/app/src/home/home.scss */
 .tweets .tweet .tweet-2 {
   width: 40%;
   margin-right: 10px;
   margin-left: 60%;
 }
 
-/* line 18, /home/dev/app/src/home/home.scss */
+/* line 20, /home/dev/app/src/home/home.scss */
 #list_pol {
   display: block;
   padding: 30px;
-  margin: 30px auto;
+  margin: 0 auto;
   width: 80%;
 }
-/* line 23, /home/dev/app/src/home/home.scss */
+/* line 25, /home/dev/app/src/home/home.scss */
 #list_pol .pol-active {
   width: 100%;
 }
-/* line 27, /home/dev/app/src/home/home.scss */
+/* line 29, /home/dev/app/src/home/home.scss */
 #list_pol .pol {
-  min-width: 250px;
-  margin: 30px auto;
+  min-width: 30%;
+  margin: 10px;
   padding: 30px;
   border: 1px solid #eee;
   display: inline-block;
   text-align: center;
   position: relative;
 }
-/* line 35, /home/dev/app/src/home/home.scss */
+/* line 37, /home/dev/app/src/home/home.scss */
 #list_pol .pol .ava {
   width: 200px;
   height: 200px;
   margin: 0 auto;
 }
-/* line 39, /home/dev/app/src/home/home.scss */
+/* line 41, /home/dev/app/src/home/home.scss */
 #list_pol .pol .ava .avatar {
   border-radius: 100%;
   border-color: 5px solid white;
   width: 100%;
   margin: 0 auto;
 }
-/* line 46, /home/dev/app/src/home/home.scss */
+/* line 48, /home/dev/app/src/home/home.scss */
 #list_pol .pol .ava .flag {
   width: 20px;
   height: 10px;
   background-color: #000;
   border-radius: 3px;
 }
-/* line 54, /home/dev/app/src/home/home.scss */
+/* line 56, /home/dev/app/src/home/home.scss */
 #list_pol .pol .desc .nom {
   font-weight: bold;
   padding: 5px;
 }
-/* line 63, /home/dev/app/src/home/home.scss */
+/* line 64, /home/dev/app/src/home/home.scss */
+#list_pol .pol .val {
+  display: none !important;
+}
+/* line 66, /home/dev/app/src/home/home.scss */
 #list_pol .pol .val .icon {
   display: inline-block;
 }
-/* line 67, /home/dev/app/src/home/home.scss */
+/* line 70, /home/dev/app/src/home/home.scss */
 #list_pol .pol .val .icon img {
   width: 40px;
   padding: 5px;
 }
-/* line 71, /home/dev/app/src/home/home.scss */
+/* line 74, /home/dev/app/src/home/home.scss */
 #list_pol .pol .val .icon .icon-xs {
   width: 25px;
 }
-/* line 74, /home/dev/app/src/home/home.scss */
+/* line 77, /home/dev/app/src/home/home.scss */
 #list_pol .pol .val .icon .icon-s {
   width: 30px;
 }
-/* line 77, /home/dev/app/src/home/home.scss */
+/* line 80, /home/dev/app/src/home/home.scss */
 #list_pol .pol .val .icon .icon-m {
   width: 40px;
 }
-/* line 80, /home/dev/app/src/home/home.scss */
+/* line 83, /home/dev/app/src/home/home.scss */
 #list_pol .pol .val .icon .icon-l {
   width: 50px;
 }
-/* line 83, /home/dev/app/src/home/home.scss */
+/* line 86, /home/dev/app/src/home/home.scss */
 #list_pol .pol .val .icon .icon-xl {
   width: 60px;
 }
-/* line 87, /home/dev/app/src/home/home.scss */
+/* line 90, /home/dev/app/src/home/home.scss */
 #list_pol .pol .val .hr {
   width: 1px;
   height: 12px;
   background-color: #eee;
   display: inline-block;
 }
-/* line 95, /home/dev/app/src/home/home.scss */
+/* line 97, /home/dev/app/src/home/home.scss */
+#list_pol .pol .votes {
+  display: none !important;
+}
+/* line 99, /home/dev/app/src/home/home.scss */
 #list_pol .pol .votes .vote {
   display: inline-block;
   padding: 5px;
 }
-/* line 100, /home/dev/app/src/home/home.scss */
+/* line 104, /home/dev/app/src/home/home.scss */
 #list_pol .pol .votes .hr {
   width: 1px;
   height: 12px;
   background-color: #eee;
   display: inline-block;
 }
-/* line 107, /home/dev/app/src/home/home.scss */
+/* line 111, /home/dev/app/src/home/home.scss */
 #list_pol .pol .details {
   width: 100%;
   /*
@@ -121,4 +130,51 @@
       top: 0;
       left: 280px;
       z-index: 1;*/
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* line 125, /home/dev/app/src/home/home.scss */
+  #list_pol {
+    padding: 30px;
+    margin: 0 auto;
+    width: 80%;
+  }
+  /* line 129, /home/dev/app/src/home/home.scss */
+  #list_pol .pol-active {
+    width: 100%;
+  }
+  /* line 133, /home/dev/app/src/home/home.scss */
+  #list_pol .pol {
+    min-width: 200px;
+    padding: 30px;
+    display: block;
+  }
+  /* line 137, /home/dev/app/src/home/home.scss */
+  #list_pol .pol .ava {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (mxn-width: 768px) {
+  /* line 146, /home/dev/app/src/home/home.scss */
+  #list_pol {
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  /* line 150, /home/dev/app/src/home/home.scss */
+  #list_pol .pol-active {
+    width: 100%;
+  }
+  /* line 154, /home/dev/app/src/home/home.scss */
+  #list_pol .pol {
+    min-width: 100px;
+    padding: 10px;
+    display: block;
+  }
+  /* line 158, /home/dev/app/src/home/home.scss */
+  #list_pol .pol .ava {
+    width: 80%;
+    height: 80%;
+  }
 }
