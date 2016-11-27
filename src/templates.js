@@ -3,7 +3,27 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
 
   $templateCache.put('assets/views/detalle/detalle.html',
     '\n' +
-    '<h1>detalle de {{detalleCtrl.infoCandidato}}</h1>'
+    '<div class="profile"><img src="{{detalleCtrl.infoCandidato.foto}}">\n' +
+    '  <h1>{{detalleCtrl.infoCandidato.nombre}}</h1>\n' +
+    '  <h5>{{detalleCtrl.infoCandidato.partido}}</h5>\n' +
+    '  <div class="val">\n' +
+    '    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xs"></div><span class="hr"></span>\n' +
+    '    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-m"></div><span class="hr"></span>\n' +
+    '    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"></div>\n' +
+    '  </div>\n' +
+    '  <div class="votes">\n' +
+    '    <div class="vote happy"><span>10%</span></div><span class="hr"></span>\n' +
+    '    <div class="vote noun"><span>60%</span></div><span class="hr"></span>\n' +
+    '    <div class="vote angry"><span>30%</span></div>\n' +
+    '  </div>\n' +
+    '  <button class="match">Versus</button>\n' +
+    '</div>\n' +
+    '<div class="tweets">\n' +
+    '  <blockquote data-lang="es" class="twitter-tweet">\n' +
+    '    <p lang="es" dir="ltr">¡Qué alegría el premio Nobel de Literatura para Bob Dylan! Muchos y gratos recuerdos de mi adolescencia están asociados a su música. — Michelle Bachelet (@mbachelet) </p><a href="https://twitter.com/mbachelet/status/786534079848124416">13 de octubre de 2016</a>\n' +
+    '  </blockquote>\n' +
+    '  <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>\n' +
+    '</div>'
   );
 
 
@@ -19,11 +39,13 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
     '      </div>\n' +
     '      <div class="val">\n' +
     '        <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xs"></div><span class="hr"></span>\n' +
+    '        <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-m"></div><span class="hr"></span>\n' +
     '        <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"></div>\n' +
     '      </div>\n' +
     '      <div class="votes">\n' +
     '        <div class="vote happy"><span>10%</span></div><span class="hr"></span>\n' +
-    '        <div class="vote angry"><span>90%</span></div>\n' +
+    '        <div class="vote noun"><span>60%</span></div><span class="hr"></span>\n' +
+    '        <div class="vote angry"><span>30%</span></div>\n' +
     '      </div>\n' +
     '    </div>\n' +
     '  </div>\n' +

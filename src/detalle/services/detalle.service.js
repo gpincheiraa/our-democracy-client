@@ -44,6 +44,7 @@
                 return {
                   nombre: searched_candidato.nombre,
                   foto: searched_candidato.foto,
+                  partido: searched_candidato.partido,
                   positivos: response.data.positive,
                   negativos: response.data.negative,
                   neutrales: response.data.neutral 

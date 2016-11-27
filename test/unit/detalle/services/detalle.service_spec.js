@@ -36,7 +36,7 @@
     function spec2(){
 
       var searchedId = 1,
-          expectedResponse = { nombre: 'Michelle Bachelet', foto: './assets/images/bachelet.png', positivos: 10, negativos: 60, neutrales: 30 };
+          expectedResponse = { nombre: 'Michelle Bachelet', foto: './assets/images/bachelet.png', partido: 'Nueva Mayoría' ,positivos: 10, negativos: 60, neutrales: 30 };
 
       DetalleService
         .getInfoCandidato(searchedId)
