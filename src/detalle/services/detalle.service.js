@@ -34,7 +34,7 @@
       var searched_candidato = getNombreCandidato(_id),
           request_params = {
             method: 'GET',
-            url: APP_SETTINGS.BASE_URL + '/search/' + searched_candidato.tag + '?analize=true'
+            url: APP_SETTINGS.BASE_URL + '/search/' + searched_candidato.tag + '?analize=true&type=recent&count=100'
           };
 
       //return listaCandidatos.filter(compareCandidatos)[0];
