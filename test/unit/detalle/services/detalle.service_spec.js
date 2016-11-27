@@ -7,12 +7,7 @@
 
     var DetalleService,
         httpBackend,
-        responseMock = {
-          nombre: 'piraña',
-          positivos: 10,
-          neutrales: 30,
-          negativos: 60
-        };
+        responseMock = { positive: 10, negative: 60, neutral: 30 };
 
     beforeEach(module('OurDemocracyApp'));
 
@@ -20,7 +15,7 @@
 
     function eachSpec($httpBackend, _DetalleService_, APP_SETTINGS){
       
-      var postCandidatoUrlRegex = new RegExp(APP_SETTINGS.BASE_URL + '/monkey/\\w+');
+      var postCandidatoUrlRegex = new RegExp(APP_SETTINGS.BASE_URL + '/search/.+\\?analize=true');
 
       DetalleService = _DetalleService_;
       httpBackend  = $httpBackend;
@@ -36,20 +31,21 @@
       expect(DetalleService).toBeDefined();
     }
 
-    // it('2. Debería devolver los resultados a través de método getInfoCandidato', spec2);
+    it('2. Debería devolver los resultados a través de método getInfoCandidato', spec2);
 
-    // function spec2(){
+    function spec2(){
 
-    //   var searchedId = 1;
+      var searchedId = 1,
+          expectedResponse = { nombre: 'Michelle Bachelet', foto: './assets/images/bachelet.png', positivos: 10, negativos: 60, neutrales: 30 };
 
-    //   DetalleService
-    //     .getInfoCandidato(searchedId)
-    //     .then(function(res){
-    //       expect(res).toEqual(responseMock);
-    //     });
+      DetalleService
+        .getInfoCandidato(searchedId)
+        .then(function(res){
+          expect(res).toEqual(expectedResponse);
+        });
 
-    //   httpBackend.flush();
-    // }
+      httpBackend.flush();
+    }
 
     it('3. Debería devolver la lista de candidatos con el método getCandidatos', spec3);
 

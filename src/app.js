@@ -12,7 +12,7 @@
   	angular
       .module('OurDemocracyApp')
       .constant('APP_SETTINGS', {
-        BASE_URL: 'http://localhost:3000/api'
+        BASE_URL: 'http://ourdemocracy.cloudapp.net:3000/api',
       });
 
     angular
