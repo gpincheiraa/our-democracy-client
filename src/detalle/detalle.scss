@@ -1,0 +1,75 @@
+.profile, .tweets, .twitter-tweet, .match{
+	text-align: center;
+	margin: 0 auto;
+}
+.profile img{
+	border-radius: 100%;
+	margin-top: -50px;
+	border: 10px solid white;
+
+}
+.match{
+	border-radius: 15px;
+	background-color: #FF3E56;
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+	border: none;
+	margin: 10px;
+	outline: none;
+}
+.match:hover:active{
+	border-radius: 15px;
+	background: inherit;
+	border: solid 1px #FF3E56;
+	color: #FF3E56;
+	font-weight: bold;
+}
+
+.val{
+	.icon{
+
+		display: inline-block;
+
+		img{
+			width: 40px;
+			padding: 5px;
+			border: none;
+			margin-top: 0px;
+		}
+		.icon-xs{
+			width: 25px;
+		}
+		.icon-s{
+			width: 30px;
+		}
+		.icon-m{
+			width: 40px;
+		}
+		.icon-l{
+			width: 50px;
+		}
+		.icon-xl{
+			width: 60px;
+		}
+	}
+	.hr{
+		width: 1px;
+		height: 12px;
+		background-color: #eee;
+		display: inline-block;
+	}
+}
+.votes{
+	.vote{
+
+		display: inline-block;
+		padding: 5px;
+	}
+	.hr{
+		width: 1px;
+		height: 12px;
+		background-color: #eee;
+		display: inline-block;
+	}
+}

@@ -1,2 +1,22 @@
 
-<h1>detalle de {{detalleCtrl.infoCandidato}}</h1>
+<div class="profile"><img src="{{detalleCtrl.infoCandidato.foto}}"/>
+  <h1>{{detalleCtrl.infoCandidato.nombre}}</h1>
+  <h5>{{detalleCtrl.infoCandidato.partido}}</h5>
+  <div class="val">
+    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xs"/></div><span class="hr"></span>
+    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-m"/></div><span class="hr"></span>
+    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"/></div>
+  </div>
+  <div class="votes">
+    <div class="vote happy"><span>10%</span></div><span class="hr"></span>
+    <div class="vote noun"><span>60%</span></div><span class="hr"></span>
+    <div class="vote angry"><span>30%</span></div>
+  </div>
+  <button class="match">Versus</button>
+</div>
+<div class="tweets">
+  <blockquote data-lang="es" class="twitter-tweet">
+    <p lang="es" dir="ltr">¡Qué alegría el premio Nobel de Literatura para Bob Dylan! Muchos y gratos recuerdos de mi adolescencia están asociados a su música. — Michelle Bachelet (@mbachelet) </p><a href="https://twitter.com/mbachelet/status/786534079848124416">13 de octubre de 2016</a>
+  </blockquote>
+  <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
