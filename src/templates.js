@@ -4,17 +4,17 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
   $templateCache.put('assets/views/detalle/detalle.html',
     '\n' +
     '<div class="profile"><img src="{{detalleCtrl.infoCandidato.foto}}">\n' +
-    '  <h1>{{detalleCtrl.infoCandidato.nombre}}</h1>\n' +
-    '  <h5>{{detalleCtrl.infoCandidato.partido}}</h5>\n' +
+    '  <h1>{{::detalleCtrl.infoCandidato.nombre}}</h1>\n' +
+    '  <h5>{{::detalleCtrl.infoCandidato.partido}}</h5>\n' +
     '  <div class="val">\n' +
     '    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xs"></div><span class="hr"></span>\n' +
     '    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-m"></div><span class="hr"></span>\n' +
     '    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"></div>\n' +
     '  </div>\n' +
     '  <div class="votes">\n' +
-    '    <div class="vote happy"><span>10%</span></div><span class="hr"></span>\n' +
-    '    <div class="vote noun"><span>60%</span></div><span class="hr"></span>\n' +
-    '    <div class="vote angry"><span>30%</span></div>\n' +
+    '    <div class="vote happy"><span>{{::detalleCtrl.infoCandidato.positivos}}</span></div><span class="hr"></span>\n' +
+    '    <div class="vote noun"><span>{{::detalleCtrl.infoCandidato.neutrales}}</span></div><span class="hr"></span>\n' +
+    '    <div class="vote angry"><span>{{::detalleCtrl.infoCandidato.negativos}}</span></div>\n' +
     '  </div>\n' +
     '  <button class="match">Versus</button>\n' +
     '</div>\n' +

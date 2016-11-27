@@ -7,7 +7,7 @@
 
     var DetalleService,
         httpBackend,
-        responseMock = { positive: 10, negative: 60, neutral: 30 };
+        responseMock = { data: {positive: 10, negative: 60, neutral: 30, total: 15 }};
 
     beforeEach(module('OurDemocracyApp'));
 
@@ -36,7 +36,7 @@
     function spec2(){
 
       var searchedId = 1,
-          expectedResponse = { nombre: 'Michelle Bachelet', foto: './assets/images/bachelet.png', partido: 'Nueva Mayoría' ,positivos: 10, negativos: 60, neutrales: 30 };
+          expectedResponse = { nombre: 'Michelle Bachelet', foto: './assets/images/bachelet.png', partido: 'Nueva Mayoría' ,positivos: 10, negativos: 60, neutrales: 30, total: 15 };
 
       DetalleService
         .getInfoCandidato(searchedId)

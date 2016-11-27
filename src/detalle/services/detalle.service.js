@@ -11,10 +11,10 @@
   function Service($http, APP_SETTINGS) {
 
     var listaCandidatos = [
-      {id: 1, nombre: 'Michelle Bachelet', tag: 'michelle+bachelet', foto: './assets/images/bachelet.png', partido: 'Nueva Mayoría'},
-      {id: 2, nombre: 'Sebastián Piñera', tag: 'sebastian+pinera', foto: './assets/images/pinera.png', partido: 'Chile Vamos'},
-      {id: 3, nombre: 'Eduardo Frei', tag: 'eduardo+frei', foto: './assets/images/frei.png', partido: 'Chile Vamos'},
-      {id: 4, nombre: 'Ricardo Lagos', tag: 'ricardo+lagos',foto: './assets/images/rlagos.png', partido: 'PPD'}
+      {id: 1, nombre: 'Michelle Bachelet', tag: 'michelle bachelet', foto: './assets/images/bachelet.png', partido: 'Nueva Mayoría'},
+      {id: 2, nombre: 'Alejandro Guiller', tag: 'alejandro guiller', foto: './assets/images/guiller.png', partido: 'Indepediente'},
+      {id: 3, nombre: 'Isabel Allende', tag: 'isabel allende', foto: './assets/images/allende.png', partido: 'PPD'},
+      {id: 4, nombre: 'Ricardo Lagos', tag: 'ricardo lagos',foto: './assets/images/rlagos.png', partido: 'PPD'}
     ];
 
     this.getInfoCandidato = getInfoCandidato;
@@ -41,13 +41,16 @@
       return $http(request_params)
               .then(function(response){
                 
+                var monkey_learn_data = response.data['data'];
+
                 return {
                   nombre: searched_candidato.nombre,
                   foto: searched_candidato.foto,
                   partido: searched_candidato.partido,
-                  positivos: response.data.positive,
-                  negativos: response.data.negative,
-                  neutrales: response.data.neutral 
+                  total: monkey_learn_data.total,
+                  positivos: monkey_learn_data.positive,
+                  negativos: monkey_learn_data.negative,
+                  neutrales: monkey_learn_data.neutral 
                 };
               
               });
