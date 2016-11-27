@@ -38,3 +38,7 @@
 	- Inyección de scripts, CSS y Fonts en `index.html` y solo scripts en `karma.conf.js`.
 	- Suite de tests con Karma.
 	- Reporte de coverage.
+
+#### Guía de estilo de programación
+
+	Se utilizó la siguiente guía de estilos para desarrollar proyectos Angular 1.x: https://github.com/johnpapa/angular-styleguide/tree/master/a1
