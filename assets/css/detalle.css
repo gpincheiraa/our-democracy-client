@@ -71,44 +71,68 @@
   display: inline-block;
 }
 
-/* line 64, /home/dev/app/src/detalle/detalle.scss */
+/* line 63, /home/dev/app/src/detalle/detalle.scss */
+.votes {
+  margin-bottom: 100px;
+}
+/* line 65, /home/dev/app/src/detalle/detalle.scss */
 .votes .vote {
   display: inline-block;
   padding: 5px;
 }
-/* line 69, /home/dev/app/src/detalle/detalle.scss */
+/* line 70, /home/dev/app/src/detalle/detalle.scss */
 .votes .hr {
   width: 1px;
   height: 12px;
   background-color: #eee;
   display: inline-block;
 }
+/* line 76, /home/dev/app/src/detalle/detalle.scss */
+.votes .icon-xs {
+  width: 25px;
+}
+/* line 79, /home/dev/app/src/detalle/detalle.scss */
+.votes .icon-s {
+  width: 30px;
+}
+/* line 82, /home/dev/app/src/detalle/detalle.scss */
+.votes .icon-m {
+  width: 40px;
+}
+/* line 85, /home/dev/app/src/detalle/detalle.scss */
+.votes .icon-l {
+  width: 50px;
+}
+/* line 88, /home/dev/app/src/detalle/detalle.scss */
+.votes .icon-xl {
+  width: 60px;
+}
 
-/* line 77, /home/dev/app/src/detalle/detalle.scss */
+/* line 93, /home/dev/app/src/detalle/detalle.scss */
 .tweets {
   display: block;
 }
-/* line 79, /home/dev/app/src/detalle/detalle.scss */
+/* line 95, /home/dev/app/src/detalle/detalle.scss */
 .tweets .twitter-tweet {
   width: 70% !important;
   display: inline-block !important;
 }
-/* line 82, /home/dev/app/src/detalle/detalle.scss */
+/* line 98, /home/dev/app/src/detalle/detalle.scss */
 .tweets .twitter-tweet .EmbeddedTweet {
   margin: 0 auto;
 }
-/* line 86, /home/dev/app/src/detalle/detalle.scss */
+/* line 102, /home/dev/app/src/detalle/detalle.scss */
 .tweets .temperature {
   width: 30px;
   margin: 10px;
   display: inline-block;
 }
-/* line 90, /home/dev/app/src/detalle/detalle.scss */
+/* line 106, /home/dev/app/src/detalle/detalle.scss */
 .tweets .temperature img {
   position: relative;
   width: 30px;
 }
-/* line 94, /home/dev/app/src/detalle/detalle.scss */
+/* line 110, /home/dev/app/src/detalle/detalle.scss */
 .tweets .temperature .barra {
   width: 10px;
   height: 100px;
@@ -127,7 +151,7 @@
   position: relative;
   display: inline-block;
 }
-/* line 107, /home/dev/app/src/detalle/detalle.scss */
+/* line 123, /home/dev/app/src/detalle/detalle.scss */
 .tweets .temperature .indicador {
   position: absolute;
   border-bottom: 10px solid transparent;

@@ -7,14 +7,14 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
     '  <h1>{{detalleCtrl.infoCandidato.nombre}}</h1>\n' +
     '  <h5>{{detalleCtrl.infoCandidato.partido}}</h5>\n' +
     '  <div class="val">\n' +
-    '    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-m"></div><span class="hr"></span>\n' +
-    '    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-m"></div><span class="hr"></span>\n' +
-    '    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-m"></div>\n' +
+    '    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xl"></div>\n' +
+    '    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-xl"></div>\n' +
+    '    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"></div>\n' +
     '  </div>\n' +
     '  <div class="votes">\n' +
-    '    <div class="vote happy"><span>10%</span></div><span class="hr"></span>\n' +
-    '    <div class="vote noun"><span>60%</span></div><span class="hr"></span>\n' +
-    '    <div class="vote angry"><span>30%</span></div>\n' +
+    '    <div class="vote happy icon-xl"><span>10%</span></div><span class="hr"></span>\n' +
+    '    <div class="vote noun icon-xl"><span>60%</span></div><span class="hr"></span>\n' +
+    '    <div class="vote angry icon-xl"><span>30%</span></div>\n' +
     '  </div>\n' +
     '</div>\n' +
     '<div class="tweets">\n' +
