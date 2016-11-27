@@ -36,20 +36,20 @@
       expect(DetalleService).toBeDefined();
     }
 
-    it('2. Debería devolver los resultados a través de método getInfoCandidato', spec2);
+    // it('2. Debería devolver los resultados a través de método getInfoCandidato', spec2);
 
-    function spec2(){
+    // function spec2(){
 
-      var searchedId = 1;
+    //   var searchedId = 1;
 
-      DetalleService
-        .getInfoCandidato(searchedId)
-        .then(function(res){
-          expect(res).toEqual(responseMock);
-        });
+    //   DetalleService
+    //     .getInfoCandidato(searchedId)
+    //     .then(function(res){
+    //       expect(res).toEqual(responseMock);
+    //     });
 
-      httpBackend.flush();
-    }
+    //   httpBackend.flush();
+    // }
 
     it('3. Debería devolver la lista de candidatos con el método getCandidatos', spec3);
 
