@@ -1,5 +1,4 @@
 (function() {
-  
   'use strict';
 
   angular
@@ -7,7 +6,7 @@
   	  //Oficial angular modules
       'ngAnimate',
       //Third party angular modules
-      'ui.router',
+      'ui.router'
   	]);
 
   	angular
@@ -76,4 +75,4 @@
     //   });
     // }
 
-})();
+}());

@@ -38,7 +38,7 @@ module.exports = function(config) {
                 // endbower
     
         'src/**/*.js',
-        'test/unit/**/*.js',
+        'test/unit/**/*.js'
     ],
 
     // list of files to exclude

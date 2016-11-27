@@ -1,8 +1,15 @@
 module.exports = function(grunt) {
-  //required for postCss
+  
+  var autoprefixer = require('autoprefixer'),
+      wiredep = require('wiredep');
+
   require('es6-promise').polyfill();
+  require('load-grunt-tasks')(grunt);
 
   //Variables que representan aspectos de la estructura de la aplicación
+  var AUTOPREFIXER_OPTIONS =  autoprefixer({browsers: ['last 10 versions']}),
+      UGLIFY_JS
+
   var INDEX_URL = 'http://localhost:9000/#/',
       ANGULAR_MAIN_MODULE  = 'OurDemocracyApp',
       ANGULAR_TEMPLATES_SRC = ['assets/views/**/*.html'],
@@ -37,7 +44,7 @@ module.exports = function(grunt) {
                                   'SCSS'  : [ 'compass', 'copy:dev', 'clean:tmpcss'],
                                   'JADE'  : [ 'jade', 'ngtemplates' ],
                                   'INDEX' : [ 'injector'],
-                                  'GRUNT' : [ 'jade', 'ngtemplates', 'wiredep', 'compass','postcss', 'injector:local_dependencies' , 'shell:test' ],
+                                  'GRUNT' : [ 'jade', 'ngtemplates', 'wiredep', 'compass','postcss', 'injector:local_dependencies' , 'shell:test' ]
                                 },
       // Tasks
       DEFAULT_TASKS        = [  'jade',
@@ -72,8 +79,7 @@ module.exports = function(grunt) {
                       'htmlmin:dist'
                     ];
   //Cargar paquetes de grunt
-  require('load-grunt-tasks')(grunt);
-
+  
   grunt.loadNpmTasks('grunt-angular-templates');
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-injector');
@@ -100,7 +106,7 @@ module.exports = function(grunt) {
     jade: {
       compile: {
         options: {
-          pretty: true,
+          pretty: true
         },
         files: grunt.file.expandMapping(['**/*.jade'], HTML_DEST, {
           cwd: 'src',
@@ -170,11 +176,7 @@ module.exports = function(grunt) {
     postcss: {
       options: {
           map: true,
-          processors: [
-              require('autoprefixer')({
-                  browsers: ['last 10 versions']
-              })
-          ]
+          processors: [AUTOPREFIXER_OPTIONS]
       },
       dist: {
         src: 'assets/css/**/*.css'
@@ -200,12 +202,12 @@ module.exports = function(grunt) {
     uglify:{
       options: {compress: true, mangle: false},
       dist: {
-        files: { 'dist/js/vendor.js': require('wiredep')().js, 'dist/js/app.js': 'src/**/*.js' }
+        files: { 'dist/js/vendor.js': wiredep().js, 'dist/js/app.js': 'src/**/*.js' }
       }
     },
     cssmin:{
       minify: {
-        files: {'dist/css/vendor.css': require('wiredep')().css, 'dist/css/app.css': 'assets/css/**/*.css' }
+        files: {'dist/css/vendor.css': wiredep().css, 'dist/css/app.css': 'assets/css/**/*.css' }
       }
     },
     imagemin: {
@@ -268,7 +270,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          keepalive: true,
+          //keepalive: true,
           port: 9000,
           base: '.',
           open: false
@@ -286,7 +288,7 @@ module.exports = function(grunt) {
         options: {
           keepalive: true,
           port: 9001,
-          base: COVERAGE_BASE ,
+          base: COVERAGE_BASE,
           open: false
         }
       },
@@ -303,7 +305,7 @@ module.exports = function(grunt) {
       css: {
         files: FILES_FOR_WATCH.CSS,
         options: {livereload:true},
-        tasks: TASKS_WHEN_FILES_CHANGE.CSS,
+        tasks: TASKS_WHEN_FILES_CHANGE.CSS
       },
       js: {
         files: FILES_FOR_WATCH.JS,
@@ -331,26 +333,23 @@ module.exports = function(grunt) {
       }
     },
     open: {
+      checkPlatform: function(){
+        return process.platform === "linux"? 'Chromium' : 'Google Chrome';
+      },
       dev: {
         url: INDEX_URL,
-        app: function() {
-          return process.platform === "linux"? 'Chromium' : 'Google Chrome';
-        }
+        app: this.checkPlatform
       },
       dist: {
         options: {delay: 500},
         url: INDEX_URL,
-        app: function(){
-          return process.platform === 'linux'? 'Chromium' : 'Google Chrome';
-        }
+        app: this.checkPlatform
       },
       coverage: {
         options: {delay: 1000},
         url: COVERAGE_URL,
-        app: function() {
-          return process.platform === "linux"? 'Chromium' : 'Google Chrome';
-        }
+        app: this.checkPlatform
       }
-    },
+    }
   });
 };
