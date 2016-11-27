@@ -23,13 +23,13 @@
     function getCandidatos(){
       return listaCandidatos;
     }
+    function compareCandidatos(candidato){
+      return parseInt(candidato.id,10) === parseInt(_id, 10);
+    }
 
     function getNombreCandidato(_id){
       
-      var searchedCandidato = listaCandidatos
-                                .filter(function(candidato){
-                                  return candidato.id == _id;
-                                })[0];
+      var searchedCandidato = listaCandidatos.filter(compareCandidatos)[0];
 
       return searchedCandidato.nombre;
     }
@@ -41,9 +41,7 @@
             url: APP_SETTINGS.BASE_URL + '/monkey/' + getNombreCandidato(_id)
           };
 
-      return listaCandidatos.filter(function(candidato){
-                return candidato.id == _id;
-              })[0];
+      return listaCandidatos.filter(compareCandidatos)[0];
       // return $http(request_params)
       //         .then(function(response){
       //           return response.data;

@@ -1,10 +1,11 @@
+var autoprefixer = require('autoprefixer'),
+      wiredep = require('wiredep'),
+      gruntTasks = require('load-grunt-tasks'),
+      es6PromisePolyfill = require('es6-promise').polyfill();
+
 module.exports = function(grunt) {
   
-  var autoprefixer = require('autoprefixer'),
-      wiredep = require('wiredep');
-
-  require('es6-promise').polyfill();
-  require('load-grunt-tasks')(grunt);
+  gruntTasks(grunt);
 
   //Variables que representan aspectos de la estructura de la aplicación
   var AUTOPREFIXER_OPTIONS =  autoprefixer({browsers: ['last 10 versions']}),
