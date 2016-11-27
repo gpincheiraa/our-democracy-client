@@ -61,6 +61,7 @@
 	}
 }
 .votes{
+	margin-bottom: 100px;
 	.vote{
 
 		display: inline-block;
@@ -71,5 +72,45 @@
 		height: 12px;
 		background-color: #eee;
 		display: inline-block;
+	}
+}
+
+.tweets{
+	display: block;
+	.twitter-tweet{
+		width: 70% !important;
+		display: inline-block !important;
+		.EmbeddedTweet {
+		    margin: 0 auto;
+		}
+	}
+	.temperature{ 
+	    width: 30px;
+	    margin: 10px;
+	    display: inline-block;
+			img{
+				position: relative;
+				width: 30px;
+			}
+			.barra{    
+				width: 10px;
+			    height: 100px;
+			    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffda6a+0,f92232+100 */
+				background: rgb(255,218,106); /* Old browsers */
+				background: -moz-linear-gradient(top,  rgba(255,218,106,1) 0%, rgba(249,34,50,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  rgba(255,218,106,1) 0%,rgba(249,34,50,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  rgba(255,218,106,1) 0%,rgba(249,34,50,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffda6a', endColorstr='#f92232',GradientType=0 ); /* IE6-9 */
+			    border-radius: 25px;
+			    position: relative;
+			    display: inline-block;
+			}
+			.indicador
+			{
+				position: absolute;
+			    border-bottom: 10px solid transparent;
+			    border-right: 10px solid #333;
+			    border-top: 10px solid transparent;
+			}
 	}
 }

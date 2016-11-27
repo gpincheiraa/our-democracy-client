@@ -6,9 +6,9 @@
   	.module('OurDemocracyApp')
   	.controller('HomeController',Controller);
 
-  Controller.$inject = ['$state', 'listaCandidatosResponse'];
+  Controller.$inject = ['$rootScope','$state', 'listaCandidatosResponse'];
 
-  function Controller($state, listaCandidatosResponse){
+  function Controller($rootScope, $state, listaCandidatosResponse){
   	
   	var vm = this;
 
@@ -18,6 +18,7 @@
 
   	function cargarDetalle(idCandidato){
 
+      $rootScope.$broadcast('loading:true');
   		$state.go('app.detalle',{id: idCandidato});
 
   	}

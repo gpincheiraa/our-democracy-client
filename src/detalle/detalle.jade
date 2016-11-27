@@ -5,13 +5,13 @@ div.profile
 	h5 {{::detalleCtrl.infoCandidato.partido}}
 	div.val
 		div.icon
-			img(src="./assets/images/happy.png").icon-happy.icon-xs
+			img(src="./assets/images/happy.png").icon-happy.icon-m
 		span.hr
 		div.icon
 			img(src="./assets/images/neutro.png").icon-noun.icon-m
 		span.hr
 		div.icon
-			img(src="./assets/images/angry.png").icon-angry.icon-xl
+			img(src="./assets/images/angry.png").icon-angry.icon-m
 	div.votes
 		div.vote.happy
 			span {{::detalleCtrl.infoCandidato.positivos}}
@@ -21,9 +21,14 @@ div.profile
 		span.hr
 		div.vote.angry
 			span {{::detalleCtrl.infoCandidato.negativos}}
-	button.match Versus
-div.tweets
+		//-button.match Versus
+//-div.tweets
 	blockquote.twitter-tweet(data-lang='es')
 		p(lang='es', dir='ltr') ¡Qué alegría el premio Nobel de Literatura para Bob Dylan! Muchos y gratos recuerdos de mi adolescencia están asociados a su música. — Michelle Bachelet (@mbachelet) 
 		a(href='https://twitter.com/mbachelet/status/786534079848124416') 13 de octubre de 2016
 	script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
+	//- div.temperature
+	//- 	img(src="./assets/images/happy.png").icon-happy.icon-m
+	//- 	span.barra
+	//- 	span.indicador
+	//- 	img(src="./assets/images/angry.png").icon-angry.icon-m

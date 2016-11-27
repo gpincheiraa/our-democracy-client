@@ -29,7 +29,18 @@
       $stateProvider
         .state('app', {
           abstract: true,
-          templateUrl: 'assets/views/main/main.html'
+          templateUrl: 'assets/views/main/main.html',
+          controllerAs: 'mainCtrl',
+          controller: ['$scope',function($scope){
+
+            var vm = this;
+
+            vm.loading = false;
+
+            $scope.$on('loading:true', function(){vm.loading = true});
+            $scope.$on('loading:false', function(){vm.loading = false});
+
+          }]
         })
           .state('app.home', {
             url:'/home',

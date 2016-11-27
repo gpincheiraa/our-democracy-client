@@ -1,3 +1,4 @@
+
 #header{
 	background: url('../assets/images/header.jpg');
 	background-size: cover;
@@ -11,4 +12,73 @@
 	margin:0;
 	padding: 50px; 
 	padding-bottom: 100px;
+}
+.loading{
+
+	&.hide{
+		display: none;
+	}
+
+	background-color: rgba(0,0,0,0.95);    
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    color: white;
+    h2,h3,h4 {
+	    margin: 35vh auto;
+	    text-align: center;
+	    width: 100%;
+	    z-index: 11;
+	    position: fixed;
+	}
+	.pong-spinner {
+	  width: 100px;
+	  height: 100px;
+	  margin: 45vh auto;
+	  position: relative;
+	}
+	.pong-spinner:before{
+		left:0;
+	}
+	.pong-spinner:before, .pong-spinner:after {
+	  width: 5px;
+	  height: 30px;
+	  border-radius: 3px; 
+	  position: absolute;
+	  background: white;
+	  content: "";
+	  animation: left-player 2s infinite linear;
+	}
+	.pong-spinner:after {
+	  animation: right-player 2s infinite linear;
+	  right: 0;
+	}
+	.pong-spinner i {
+	  width: 10px;
+	  height: 10px;
+	  position: absolute;
+	  background: white;
+	  border-radius: 10px;
+	  animation: ball 2s infinite linear;
+	}
+	@keyframes left-player {
+		0% { top: 0; }
+		50% { top: 70px; }
+		100% { top: 0px; }
+	}
+	@keyframes right-player {
+		0% { top: 70px; }
+		50% { top: 0; }
+		100% { top: 70px; }
+	}
+	@keyframes ball {
+		0% { top: 20px; left: 5px; }
+		25% { top: 50px; left: 90px; }
+		50% { top: 80px; left: 5px; }
+		75% { top: 50px; left: 90px; }
+		100% { top: 20px; left: 5px; }
+	}
 }

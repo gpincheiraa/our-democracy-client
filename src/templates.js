@@ -7,22 +7,15 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
     '  <h1>{{::detalleCtrl.infoCandidato.nombre}}</h1>\n' +
     '  <h5>{{::detalleCtrl.infoCandidato.partido}}</h5>\n' +
     '  <div class="val">\n' +
-    '    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xs"></div><span class="hr"></span>\n' +
+    '    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-m"></div><span class="hr"></span>\n' +
     '    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-m"></div><span class="hr"></span>\n' +
-    '    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"></div>\n' +
+    '    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-m"></div>\n' +
     '  </div>\n' +
     '  <div class="votes">\n' +
     '    <div class="vote happy"><span>{{::detalleCtrl.infoCandidato.positivos}}</span></div><span class="hr"></span>\n' +
     '    <div class="vote noun"><span>{{::detalleCtrl.infoCandidato.neutrales}}</span></div><span class="hr"></span>\n' +
     '    <div class="vote angry"><span>{{::detalleCtrl.infoCandidato.negativos}}</span></div>\n' +
     '  </div>\n' +
-    '  <button class="match">Versus</button>\n' +
-    '</div>\n' +
-    '<div class="tweets">\n' +
-    '  <blockquote data-lang="es" class="twitter-tweet">\n' +
-    '    <p lang="es" dir="ltr">¡Qué alegría el premio Nobel de Literatura para Bob Dylan! Muchos y gratos recuerdos de mi adolescencia están asociados a su música. — Michelle Bachelet (@mbachelet) </p><a href="https://twitter.com/mbachelet/status/786534079848124416">13 de octubre de 2016</a>\n' +
-    '  </blockquote>\n' +
-    '  <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>\n' +
     '</div>'
   );
 
@@ -60,6 +53,9 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
     '    <h1>Nuestra democracia</h1>\n' +
     '    <h3>Conoce cómo reacciona la gente ante los tweets de los políticos. </h3>\n' +
     '  </div>\n' +
+    '</div>\n' +
+    '<div ng-show="{{mainCtrl.loading}}" class="loading">\n' +
+    '  <div class="pong-spinner"><i></i></div>\n' +
     '</div>\n' +
     '<div ui-view="content"></div>'
   );

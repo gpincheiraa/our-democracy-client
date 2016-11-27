@@ -3,4 +3,10 @@ div#header
 		img.logo(src="./assets/images/twitter.png")
 		h1 Nuestra democracia
 		h3 Conoce cómo reacciona la gente ante los tweets de los políticos. 
+
+
+div.loading(ng-show="{{mainCtrl.loading}}")
+	div.pong-spinner
+		i
+
 div(ui-view="content")
