@@ -18,7 +18,6 @@
 
   	function cargarDetalle(idCandidato){
 
-      $rootScope.$broadcast('loading:true');
   		$state.go('app.detalle',{id: idCandidato});
 
   	}

@@ -1,0 +1,15 @@
+
+<div class="profile"><img src="{{detalleCtrl.infoCandidato.foto}}"/>
+  <h1>{{::detalleCtrl.infoCandidato.nombre}}</h1>
+  <h5>{{::detalleCtrl.infoCandidato.partido}}</h5>
+  <div class="val">
+    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xl"/></div>
+    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-xl"/></div>
+    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"/></div>
+  </div>
+  <div class="votes">
+    <div class="vote happy icon-xl"><span>{{::detalleCtrl.infoCandidato.positivos}}</span></div><span class="hr"></span>
+    <div class="vote noun icon-xl"><span>{{::detalleCtrl.infoCandidato.neutrales}}</span></div><span class="hr"></span>
+    <div class="vote angry icon-xl"><span>{{::detalleCtrl.infoCandidato.negativos}}</span></div>
+  </div>
+</div>

@@ -5,8 +5,9 @@ div#header
 		h3 Conoce cómo reacciona la gente ante los tweets de los políticos. 
 
 
-div.loading(ng-show="{{mainCtrl.loading}}")
+div.loading(ng-show="mainCtrl.loading")
 	div.pong-spinner
 		i
-
+	div
+		span Buscando información de {{::mainCtrl.nombreCandidato}} en Twitter
 div(ui-view="content")

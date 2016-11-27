@@ -1,0 +1,160 @@
+/* line 1, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.profile, .tweets, .twitter-tweet, .match {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 5, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.profile img {
+  border-radius: 100%;
+  margin-top: -50px;
+  border: 10px solid white;
+}
+
+/* line 11, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.match {
+  border-radius: 15px;
+  background-color: #FF3E56;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  outline: none;
+}
+
+/* line 21, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.match:hover:active {
+  border-radius: 15px;
+  background: inherit;
+  border: solid 1px #FF3E56;
+  color: #FF3E56;
+  font-weight: bold;
+}
+
+/* line 30, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.val .icon {
+  display: inline-block;
+}
+/* line 34, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.val .icon img {
+  width: 40px;
+  padding: 5px;
+  border: none;
+  margin-top: 0px;
+}
+/* line 40, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.val .icon .icon-xs {
+  width: 25px;
+}
+/* line 43, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.val .icon .icon-s {
+  width: 30px;
+}
+/* line 46, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.val .icon .icon-m {
+  width: 40px;
+}
+/* line 49, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.val .icon .icon-l {
+  width: 50px;
+}
+/* line 52, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.val .icon .icon-xl {
+  width: 60px;
+}
+/* line 56, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.val .hr {
+  width: 1px;
+  height: 12px;
+  background-color: #eee;
+  display: inline-block;
+}
+
+/* line 63, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.votes {
+  margin-bottom: 100px;
+}
+/* line 65, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.votes .vote {
+  display: inline-block;
+  padding: 5px;
+}
+/* line 70, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.votes .hr {
+  width: 1px;
+  height: 12px;
+  background-color: #eee;
+  display: inline-block;
+}
+/* line 76, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.votes .icon-xs {
+  width: 25px;
+}
+/* line 79, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.votes .icon-s {
+  width: 30px;
+}
+/* line 82, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.votes .icon-m {
+  width: 40px;
+}
+/* line 85, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.votes .icon-l {
+  width: 50px;
+}
+/* line 88, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.votes .icon-xl {
+  width: 60px;
+}
+
+/* line 93, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.tweets {
+  display: block;
+}
+/* line 95, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.tweets .twitter-tweet {
+  width: 70% !important;
+  display: inline-block !important;
+}
+/* line 98, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.tweets .twitter-tweet .EmbeddedTweet {
+  margin: 0 auto;
+}
+/* line 102, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.tweets .temperature {
+  width: 30px;
+  margin: 10px;
+  display: inline-block;
+}
+/* line 106, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.tweets .temperature img {
+  position: relative;
+  width: 30px;
+}
+/* line 110, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.tweets .temperature .barra {
+  width: 10px;
+  height: 100px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffda6a+0,f92232+100 */
+  background: #ffda6a;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffda6a 0%, #f92232 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffda6a 0%, #f92232 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffda6a 0%, #f92232 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffda6a', endColorstr='#f92232',GradientType=0 );
+  /* IE6-9 */
+  border-radius: 25px;
+  position: relative;
+  display: inline-block;
+}
+/* line 123, /Users/gonzaloignaciopincheiraarancibia/Desktop/nodeApps/github/dev-wise/our_democracy_client/src/detalle/detalle.scss */
+.tweets .temperature .indicador {
+  position: absolute;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #333;
+  border-top: 10px solid transparent;
+}

@@ -7,14 +7,14 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
     '  <h1>{{::detalleCtrl.infoCandidato.nombre}}</h1>\n' +
     '  <h5>{{::detalleCtrl.infoCandidato.partido}}</h5>\n' +
     '  <div class="val">\n' +
-    '    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-m"></div><span class="hr"></span>\n' +
-    '    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-m"></div><span class="hr"></span>\n' +
-    '    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-m"></div>\n' +
+    '    <div class="icon"><img src="./assets/images/happy.png" class="icon-happy icon-xl"></div>\n' +
+    '    <div class="icon"><img src="./assets/images/neutro.png" class="icon-noun icon-xl"></div>\n' +
+    '    <div class="icon"><img src="./assets/images/angry.png" class="icon-angry icon-xl"></div>\n' +
     '  </div>\n' +
     '  <div class="votes">\n' +
-    '    <div class="vote happy"><span>{{::detalleCtrl.infoCandidato.positivos}}</span></div><span class="hr"></span>\n' +
-    '    <div class="vote noun"><span>{{::detalleCtrl.infoCandidato.neutrales}}</span></div><span class="hr"></span>\n' +
-    '    <div class="vote angry"><span>{{::detalleCtrl.infoCandidato.negativos}}</span></div>\n' +
+    '    <div class="vote happy icon-xl"><span>{{::detalleCtrl.infoCandidato.positivos}}</span></div><span class="hr"></span>\n' +
+    '    <div class="vote noun icon-xl"><span>{{::detalleCtrl.infoCandidato.neutrales}}</span></div><span class="hr"></span>\n' +
+    '    <div class="vote angry icon-xl"><span>{{::detalleCtrl.infoCandidato.negativos}}</span></div>\n' +
     '  </div>\n' +
     '</div>'
   );
@@ -54,8 +54,9 @@ angular.module('OurDemocracyApp').run(['$templateCache', function($templateCache
     '    <h3>Conoce cómo reacciona la gente ante los tweets de los políticos. </h3>\n' +
     '  </div>\n' +
     '</div>\n' +
-    '<div ng-show="{{mainCtrl.loading}}" class="loading">\n' +
+    '<div ng-show="mainCtrl.loading" class="loading">\n' +
     '  <div class="pong-spinner"><i></i></div>\n' +
+    '  <div><span>Buscando información de {{::mainCtrl.nombreCandidato}} en Twitter</span></div>\n' +
     '</div>\n' +
     '<div ui-view="content"></div>'
   );

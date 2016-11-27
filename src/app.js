@@ -37,8 +37,14 @@
 
             vm.loading = false;
 
-            $scope.$on('loading:true', function(){vm.loading = true});
-            $scope.$on('loading:false', function(){vm.loading = false});
+            $scope.$on('loading:true', function(e, nombreCandidato){
+              vm.loading = true
+              vm.nombreCandidato = nombreCandidato;
+            });
+            
+            $scope.$on('loading:false', function(){
+              vm.loading = false
+            });
 
           }]
         })

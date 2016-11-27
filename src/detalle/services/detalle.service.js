@@ -6,9 +6,9 @@
     .module('OurDemocracyApp')
     .service('DetalleService', Service);
   
-  Service.$inject = ['$http','APP_SETTINGS'];
+  Service.$inject = ['$rootScope', '$http', 'APP_SETTINGS'];
   
-  function Service($http, APP_SETTINGS) {
+  function Service($rootScope, $http, APP_SETTINGS) {
 
     var listaCandidatos = [
       {id: 1, nombre: 'Michelle Bachelet', tag: 'michelle bachelet', foto: './assets/images/bachelet.png', partido: 'Nueva Mayoría'},
@@ -36,6 +36,9 @@
             method: 'GET',
             url: APP_SETTINGS.BASE_URL + '/search/' + searched_candidato.tag + '?analize=true&type=recent&count=100'
           };
+
+
+      $rootScope.$broadcast('loading:true', searched_candidato.nombre);
 
       //return listaCandidatos.filter(compareCandidatos)[0];
       return $http(request_params)
