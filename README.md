@@ -1,27 +1,40 @@
-Front End Seed/Scaffold
-=======================
+## Our Democracy Client
 
-Este documento está desarrollado para establecer el estándar de desarrollo web de las aplicaciones front end.
+[travis-image]: https://travis-ci.org/gpincheiraa/our-democracy-client.png
+[travis-url]: https://travis-ci.org/gpincheiraa/our-democracy-client
 
-### ¿Qué contiene?
+[codeclimate-image]: https://codeclimate.com/github/gpincheiraa/our-democracy-client/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/gpincheiraa/our-democracy-client
 
- - [Tareas automatizadas](docs/tareas_automatizadas.md)
- - [Librerías/Plugins](docs/libs_plugins.md)
- - [Otras funcionalidades](docs/ci_e2e_coverage.md)
+[codeclimate-coverage-image]: https://codeclimate.com/github/gpincheiraa/our-democracy-client/badges/coverage.svg
+[codeclimate-coverage-url]: https://codeclimate.com/github/gpincheiraa/our-democracy-client/coverage
 
-### Estándar de desarrollo Angular
+[codeclimate-issues-image]: https://codeclimate.com/github/gpincheiraa/our-democracy-client/badges/issue_count.svg
+[codeclimate-issues-url]: https://codeclimate.com/github/gpincheiraa/our-democracy-client
 
-Las aplicaciones deben ser desarrolladas siguiendo la guía de estilo de programación propuesta en este [link](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
+[![Build Status][travis-image]][travis-url] [![Code Climate][codeclimate-image]][codeclimate-url] [![Test Coverage][codeclimate-coverage-image]][codeclimate-coverage-url][![Issue Count][codeclimate-issues-image]][codeclimate-issues-url]
 
-### Ejemplos
+### Desarrollo
+	
+### Requisitos
 
-- [Definir una nueva ruta]()
-- [Crear un servicio para realizar petición a una API]()
-- [Crear un formulario con validación](docs/examples/form_example.md)
-- [Crear una tabla con paginación](docs/examples/table_example.md)
-- [Crear un modal](docs/examples/modal_example.md)
-- [Mostrar una alerta](docs/examples/alert_example.md)
-- [Agregar un token de seguridad a las peticiones](docs/examples/token_example.md)
-- [Crear un componente html reutilizable](docs/examples/directive_example.md)
+	- Docker
+	- git
 
-- [Definir Breadcrumbs](docs/examples/breadcrumbs_example.md)
+### Instalación 
+
+	- `sh build` y elegir un nombre para la imagen
+	- `sh run-container` y elegir el nombre de la imagen recién creada y un nombre para el contenedor. Una vez ejecutado este comando aparecerás dentro del container (en la consola bash)
+	- Para salir del container `ctrl + d`. Para ingresar al container `docker start -ia <nombre-del-contenedor>`
+	- Dentro del contenedor ejecutar `npm install && bower install`
+	- Una vez instaladas las dependencias de desarrollo y del proyecto, ejecutar `grunt` para ejecutar las tareas automatizadas.
+
+#### Tareas automatizadas ejecutadas por defecto
+
+	- Cacheado de templates.
+	- Compilación de jade a HTML.
+	- Compilacion de scss a CSS.
+	- Aplicación automática de prefijos CSS cross-browser.
+	- Inyección de scripts, CSS y Fonts en `index.html` y solo scripts en `karma.conf.js`.
+	- Suite de tests con Karma.
+	- Reporte de coverage.

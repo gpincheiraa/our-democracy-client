@@ -8,9 +8,11 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 before_script:
-  - npm install -g bower 
+  - npm install -g bower codeclimate-test-reporter
   - npm install
   - bower install
+after_script:
+  - codeclimate-test-reporter < test/coverage/report-lcov/lcov.info
 addons:
   code_climate:
     repo_token: e47c21de9651d493db521df6fc1e5d4ac1c9f129b849bfa475c82088ff8326da
