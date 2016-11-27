@@ -2,7 +2,7 @@
 engines:
   csslint:
     enabled: true
-    check:
+    checks:
       known-properties:
         enabled: false
       fallback-colors:
