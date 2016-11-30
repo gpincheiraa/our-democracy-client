@@ -1,6 +1,6 @@
 
 div.profile
-	img(src="{{detalleCtrl.infoCandidato.foto}}")
+	img(src="{{detalleCtrl.infoCandidato.foto}}",ng-click="detalleCtrl.volverHome()")
 	h1 {{::detalleCtrl.infoCandidato.nombre}}
 	h5 {{::detalleCtrl.infoCandidato.partido}}
 	div.val
