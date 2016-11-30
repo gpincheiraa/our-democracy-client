@@ -14,6 +14,8 @@
 
   	vm.infoCandidato = infoCandidatoResponse;
 
+    vm.volverHome = volverHome;
+
     //$('.loading').addClass('hide');
 
     function volverHome(){

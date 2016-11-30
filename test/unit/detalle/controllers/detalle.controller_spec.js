@@ -35,7 +35,7 @@
       expect(DetalleController).toBeDefined();
     }
 
-    it('2.  Debería redirigir al detalle al hacer clic en la foto del candidato', spec2);
+    it('2. Debería redirigir al detalle al hacer clic en la foto del candidato', spec2);
 
     function spec2(){
 
