@@ -5,7 +5,7 @@ FROM node:6-slim
 # Any sudo command
 RUN apt-get update && apt-get install -y \
     ruby \
-    ruby-dev
+    ruby-dev build-essential
 
 RUN gem install compass --no-ri --no-rdoc
 
