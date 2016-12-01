@@ -35,6 +35,16 @@
       expect(DetalleController).toBeDefined();
     }
 
+    it('2. Debería redirigir al detalle al hacer clic en la foto del candidato', spec2);
+
+    function spec2(){
+
+      spyOn(stateService,'go');
+      DetalleController.volverHome();
+
+      expect(stateService.go).toHaveBeenCalledWith('app.home');
+    }
+
   }
 
  })();
